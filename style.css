@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.page {
+  background-size: cover;
+  padding: 30px;
+  background-color: black;
+  overflow: scroll;
+}
+
+.pokedex-logo {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.content {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card {
+  width: 280px;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid white;
+  background-color: rgba(135, 205, 233, 0.6);
+  border-radius: 30px;
+}
+
+.card figure {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card figcaption {
+  padding: 5px;
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  background-color: #dd1447a8;
+  border-radius: 2em;
+}
+
+.poke-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, crimson, black, white);
+  box-shadow: 10px 10px 25px black;
+  transition: ease-out;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+.poke-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.attributes {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-content: center;
+  transition: 2s;
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  border-radius: 24px;
+}
+
+.card:hover {
+  z-index: 1;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 50px white;
+}
+
+.card:hover .poke-image {
+  transition: ease-out;
+  transition-duration: 1s;
+  transform: translate(0, 10em);
+}
+
+.card:hover figcaption {
+  transition: ease-out;
+  transition-duration: 1s;
+  transform: translate(0, -175px);
+}
+
+.card:hover .attribute {
+  border-color: black;
+  background-color: rgba(135, 205, 233, 0.9);
+}
+
+.card:hover .attribute:nth-child(odd) {
+  transform: translate(-18em, -5.2em);
+}
+
+.card:hover .attribute:nth-child(even) {
+  transform: translate(18em, -7em);
+}
+
+.content:has(.card:hover) .card:not(:hover) {
+  filter: blur(0.5em);
+}
+
+span {
+  color: white;
+  padding: 0.125em;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+/* Colors for Types of Pokemon */
+.poison,
+.rock,
+.ground,
+.water,
+.bug,
+.normal,
+.fighting,
+.steel,
+.ghost,
+.dragon,
+.dark {
+  color: antiquewhite;
+}
+
+.grass {
+  background-color: rgb(155, 203, 80);
+}
+
+.poison {
+  background-color: rgb(186, 127, 200);
+
+}
+
+.rock {
+  background-color: rgb(163, 143, 33);
+}
+
+.fire {
+  background-color: rgb(255, 125, 37);
+}
+
+.electric {
+  background-color: rgb(238, 213, 53);
+}
+
+.ground {
+  background-color: rgb(209, 187, 64);
+}
+
+.water {
+  background-color: rgb(69, 146, 195);
+}
+
+.bug {
+  background-color: rgb(110, 156, 60);
+}
+
+.flying {
+  background-color: rgb(125, 192, 211);
+}
+
+.normal {
+  background-color: rgb(163, 172, 175);
+}
+
+.fairy {
+  background-color: rgb(253, 185, 233);
+}
+
+.fighting {
+  background-color: rgb(213, 113, 35);
+}
+
+.psychic {
+  background-color: rgb(243, 102, 185);
+}
+
+.steel {
+  background-color: rgb(158, 183, 184);
+}
+
+.ice {
+  background-color: rgb(81, 195, 231);
+}
+
+.ghost {
+  background-color: rgb(123, 98, 163);
+}
+
+.dragon {
+  background-color: rgb(241, 110, 87);
+}
+
+.dark {
+  background-color: rgb(112, 112, 112);
+}
